@@ -2,6 +2,7 @@ import { useState, useMemo } from 'react';
 import { useTheme } from '../context/ThemeContext';
 import PostCard from '../components/PostCard';
 import { getSortedPosts, getAllTags } from '../data/posts';
+import { useState, useEffect } from 'react';
 
 const ALL_POSTS = getSortedPosts();
 const ALL_TAGS  = getAllTags();

@@ -6,6 +6,7 @@ import LibraryScene from '../components/scenes/LibraryScene';
 import CityScene from '../components/scenes/CityScene';
 import TrainScene from '../components/scenes/TrainScene';
 import { getRecentPosts } from '../data/posts';
+import { useState, useEffect } from 'react';
 
 useEffect(() => {
   document.title = "Home | I Should Have My Tea"; 

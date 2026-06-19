@@ -3,6 +3,7 @@ import { useTheme } from '../context/ThemeContext';
 // import { marked } from 'marked';
 // import DOMPurify from 'dompurify';
 import { useMemo } from 'react';
+import { useState, useEffect } from 'react';
 
 marked.setOptions({ gfm: true, breaks: false });
 

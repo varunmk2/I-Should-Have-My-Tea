@@ -11,10 +11,10 @@ export default function Article() {
   const { slug } = useParams();
   const { palette } = useTheme();
 
-  // Add this inside your Home() / About() / Blog() components before the return statement:
-useEffect(() => {
-  document.title = "Article | I Should Have My Tea"; // Swap "Home" for whichever page it is
-}, []);
+//   // Add this inside your Home() / About() / Blog() components before the return statement:
+// useEffect(() => {
+//   document.title = "Article | I Should Have My Tea"; // Swap "Home" for whichever page it is
+// }, []);
   
   // New States to handle your files dynamically
   const [post, setPost] = useState(null);
