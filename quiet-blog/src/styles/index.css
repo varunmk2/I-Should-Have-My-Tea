@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b0c9bc;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8aafaa;
+}
+
+/* === PROSE STYLES === */
+
+article h1,
+article h2,
+article h3,
+article h4 {
+  font-family: 'JetBrains Mono', monospace;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.25;
+}
+
+article h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+article h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-bottom: 2px solid currentColor;
+  border-bottom-opacity: 0.2;
+  padding-bottom: 0.35rem;
+}
+
+article h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+article p {
+  margin-bottom: 1.4rem;
+}
+
+article a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+article blockquote {
+  margin: 2rem 0;
+  padding: 1.25rem 1.5rem;
+  border-left: 4px solid currentColor;
+  border-left-opacity: 0.8;
+  border-radius: 0 6px 6px 0;
+  font-style: italic;
+  font-size: 1.1rem;
+  position: relative;
+  opacity: 0.9;
+}
+
+article blockquote::before {
+  content: '"';
+  position: absolute;
+  top: -8px;
+  left: 12px;
+  font-size: 3rem;
+  opacity: 0.35;
+  font-family: 'JetBrains Mono', monospace;
+  line-height: 1;
+}
+
+article code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.875rem;
+  border: 1px solid currentColor;
+  border-opacity: 0.2;
+  border-radius: 4px;
+  padding: 0.15em 0.45em;
+}
+
+article pre {
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  overflow-x: auto;
+  margin: 1.75rem 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.88rem;
+  line-height: 1.7;
+  border: 2px solid currentColor;
+  border-opacity: 0.2;
+}
+
+article pre code {
+  border: none;
+  padding: 0;
+  font-size: inherit;
+}
+
+article ul,
+article ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.4rem;
+}
+
+article li {
+  margin-bottom: 0.45rem;
+}
+
+article hr {
+  border: none;
+  border-top: 2px dashed currentColor;
+  border-top-opacity: 0.2;
+  margin: 2.5rem 0;
+}
+
+article img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 1.5rem auto;
+  display: block;
+  border: 2px solid currentColor;
+  border-opacity: 0.15;
+}
+
+article table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+
+article th {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.6rem 1rem;
+  border: 1px solid currentColor;
+  border-opacity: 0.2;
+  text-align: left;
+}
+
+article td {
+  padding: 0.6rem 1rem;
+  border: 1px solid currentColor;
+  border-opacity: 0.15;
+}
+
+article tr:nth-child(even) td {
+  opacity: 0.5;
+}
+
+/* === ANIMATIONS === */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -45%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-5px); }
+}
+
+@keyframes ripple {
+  0%, 100% { transform: scaleX(1); opacity: 0.7; }
+  50%       { transform: scaleX(1.02); opacity: 1; }
+}
+
+@keyframes sway {
+  0%, 100% { transform: rotate(-0.8deg); }
+  50%       { transform: rotate(0.8deg); }
+}
+
+/* === RESPONSIVE === */
+
+@media (max-width: 768px) {
+  article h1 {
+    font-size: 1.6rem;
+  }
+
+  article h2 {
+    font-size: 1.3rem;
+  }
+
+  html {
+    font-size: 14px;
+  }
+}
