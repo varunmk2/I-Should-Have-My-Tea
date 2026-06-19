@@ -11,8 +11,8 @@ export default defineConfig({
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom', 'react-router-dom'],
-          // Swapped out the old deleted packages for your new ones!
-          markdown: ['react-markdown', 'gray-matter'],
+          // Removed gray-matter from this array!
+          markdown: ['react-markdown'], 
         }
       }
     }
