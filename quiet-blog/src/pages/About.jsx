@@ -1,11 +1,9 @@
 import { Link } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
-// import { marked } from 'marked';
-// import DOMPurify from 'dompurify';
-// import { useMemo } from 'react';
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
+import ReactMarkdown from 'react-markdown';
 
-marked.setOptions({ gfm: true, breaks: false });
+// Clean, inline declaration of your metadata content
 export const about = {
   name: "Varun Kolambekar",
   content: `
@@ -26,18 +24,11 @@ So, welcome. Enjoy reading my raw, unfiltered thoughts. Ignore the spelling mist
 };
 
 export default function About() {
-
-// Add this inside your Home() / About() / Blog() components before the return statement:
-useEffect(() => {
-  document.title = "About | I Should Have My Tea"; // Swap "Home" for whichever page it is
-}, []);
-
   const { palette } = useTheme();
 
-  const html = useMemo(
-    () => DOMPurify.sanitize(marked.parse(about.content)),
-    []
-  );
+  useEffect(() => {
+    document.title = "About | I Should Have My Tea";
+  }, []);
 
   return (
     <main style={{ background: palette.bg, color: palette.text, padding: '4rem 1.5rem 7rem', transition: 'all 0.3s ease' }}>
@@ -108,7 +99,7 @@ useEffect(() => {
             <p style={{ fontSize: '1rem', color: palette.text, lineHeight: 1.8, marginBottom: '1rem' }}>
               I'm a third-year Computer Engineering student who (tries to) study and learn things during the day
               and read during the night. This blog is where I process what I'm learning 
-              about code, about books, movies,and everything about the strange project of being a person.
+              about code, about books, movies, and everything about the strange project of being a person.
             </p>
             <Link to="/blog" style={{
               display: 'inline-flex',
@@ -141,8 +132,10 @@ useEffect(() => {
               lineHeight: '1.85',
               color: palette.text,
             }}
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
+          >
+            {/* Swapped custom renderer to securely parse markdown string natively */}
+            <ReactMarkdown children={about.content} />
+          </div>
         </article>
       </div>
     </main>
