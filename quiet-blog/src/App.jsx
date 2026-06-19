@@ -75,7 +75,7 @@ function AppContent() {
 export default function App() {
   return (
     <ThemeProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/I-Should-Have-My-Tea">
         <AppContent />
       </BrowserRouter>
     </ThemeProvider>

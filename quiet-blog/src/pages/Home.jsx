@@ -27,10 +27,10 @@ const FEATURES = [
 
 function getScene(theme) {
   const imagePaths = {
-    ocean: '/images/oceanscene.jpg',
-    library: '/images/libraryscene.jpg',
-    city: '/images/cityscene.jpg',
-    train: '/images/trainscene.jpg',
+    ocean: `${import.meta.env.BASE_URL}images/oceanscene.jpg`,
+    library: `${import.meta.env.BASE_URL}images/libraryscene.jpg`,
+    city: `${import.meta.env.BASE_URL}images/cityscene.jpg`,
+    train: `${import.meta.env.BASE_URL}images/trainscene.jpg`,
   };
   const imagePath = imagePaths[theme] || imagePaths.ocean;
   

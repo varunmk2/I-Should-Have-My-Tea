@@ -62,7 +62,7 @@ Ultimately, A Long Way Down reminded me that we don’t need to have our entire 
     pubDate: "2026-06-17",
     tags: ["Rant", "Perspectives"],
     readTime: "4 min read",
-    featuredImage: "/images/commute.jpg",
+    featuredImage: `${import.meta.env.BASE_URL}images/commute.jpg`,
     content: `
 
 I am a college student whose daily routine consists of traveling around 15 kilo meters every day to my campus. Recently, during my vacation, I also took up an internship that requires me to travel the exact same distance.
