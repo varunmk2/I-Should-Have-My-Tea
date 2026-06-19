@@ -6,7 +6,7 @@ export const posts = [
     pubDate: "2026-06-12",
     tags: ["Review", "Life Lessons","Books"],
     readTime: "4 min read",
-    featuredImage: null,
+    featuredImage: `${import.meta.env.BASE_URL}images/longwaydown.jpg`,
     content: `
 A Long Way Down is based on a group of four people who run into each other on New Year’s Eve at the top of a London skyscraper, all with the simple, goal of jumping.
 
