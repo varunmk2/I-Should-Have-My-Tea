@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider, useTheme } from './context/ThemeContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -56,7 +56,7 @@ function AppContent() {
   const { palette } = useTheme();
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', background: palette.bg, color: palette.text, transition: 'all 0.3s ease' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', background: palette.bg, color: palette.text, transition: 'background 0.3s ease, color 0.3s ease' }}>
       <Navbar />
 
       <Routes>
@@ -75,9 +75,10 @@ function AppContent() {
 export default function App() {
   return (
     <ThemeProvider>
-      <BrowserRouter basename="/I-Should-Have-My-Tea">
+      {/* HashRouter handles sub-paths cleanly on GitHub Pages without breaking */}
+      <HashRouter>
         <AppContent />
-      </BrowserRouter>
+      </HashRouter>
     </ThemeProvider>
   );
 }

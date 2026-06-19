@@ -6,6 +6,11 @@ import { getSortedPosts, getAllTags } from '../data/posts';
 const ALL_POSTS = getSortedPosts();
 const ALL_TAGS  = getAllTags();
 
+// Add this inside your Home() / About() / Blog() components before the return statement:
+useEffect(() => {
+  document.title = "Blog | I Should Have My Tea"; // Swap "Home" for whichever page it is
+}, []);
+
 export default function Blog() {
   const [query, setQuery] = useState('');
   const [activeTag, setActiveTag] = useState(null);

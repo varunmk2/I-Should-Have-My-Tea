@@ -7,6 +7,10 @@ import CityScene from '../components/scenes/CityScene';
 import TrainScene from '../components/scenes/TrainScene';
 import { getRecentPosts } from '../data/posts';
 
+useEffect(() => {
+  document.title = "Home | I Should Have My Tea"; 
+}, []);
+
 const FEATURES = [
   {
     emoji: '🧘',

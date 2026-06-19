@@ -104,12 +104,44 @@ export const themePalettes = {
   },
 };
 
+// export function ThemeProvider({ children }) {
+//   const [theme, setTheme] = useState('ocean');
+//   const [mode, setMode] = useState('light');
+
+//   const palette = themePalettes[theme][mode];
+
+//   const toggleTheme = (newTheme) => setTheme(newTheme);
+//   const toggleMode = () => setMode((m) => (m === 'light' ? 'dark' : 'light'));
+
+//   return (
+//     <ThemeContext.Provider value={{ theme, setTheme: toggleTheme, mode, toggleMode, palette }}>
+//       {children}
+//     </ThemeContext.Provider>
+//   );
+// }
+
+// export function useTheme() {
+//   const ctx = useContext(ThemeContext);
+//   if (!ctx) throw new Error('useTheme must be inside ThemeProvider');
+//   return ctx;
+// }
+export const themePalettes = { /* ... keep your existing themePalettes object exactly as it is ... */ };
+
 export function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState('ocean');
-  const [mode, setMode] = useState('light');
+  // Read saved settings or fall back to defaults
+  const [theme, setTheme] = useState(() => localStorage.getItem('blog-theme') || 'ocean');
+  const [mode, setMode] = useState(() => localStorage.getItem('blog-mode') || 'light');
+
+  // Save to localStorage whenever they change
+  useEffect(() => {
+    localStorage.setItem('blog-theme', theme);
+  }, [theme]);
+
+  useEffect(() => {
+    localStorage.setItem('blog-mode', mode);
+  }, [mode]);
 
   const palette = themePalettes[theme][mode];
-
   const toggleTheme = (newTheme) => setTheme(newTheme);
   const toggleMode = () => setMode((m) => (m === 'light' ? 'dark' : 'light'));
 

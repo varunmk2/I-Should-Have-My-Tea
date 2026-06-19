@@ -6,6 +6,11 @@ import { useMemo } from 'react';
 
 marked.setOptions({ gfm: true, breaks: false });
 
+// Add this inside your Home() / About() / Blog() components before the return statement:
+useEffect(() => {
+  document.title = "About | I Should Have My Tea"; // Swap "Home" for whichever page it is
+}, []);
+
 export const about = {
   name: "Varun Kolambekar",
   content: `

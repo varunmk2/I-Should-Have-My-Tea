@@ -153,6 +153,15 @@ And disconnect the act from the outcome. Write the post. Hit publish. Close the 
 The work is the work. The rest is noise.
     `,
   },
+  {
+    slug: "daily-obstacle",
+    title: "The Daily Obstacle Course",
+    description: "Exploring the daily adjustments we make in our design workflows.",
+    pubDate: "2026-06-19",
+    readTime: "1 min read",
+    tags: ["design", "workflow"],
+    featuredImage: null 
+  }
 ];
 
 export const getSortedPosts = () =>
