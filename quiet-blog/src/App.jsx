@@ -75,8 +75,8 @@ function AppContent() {
 export default function App() {
   return (
     <ThemeProvider>
-      {/* HashRouter handles sub-paths cleanly on GitHub Pages without breaking */}
-      <HashRouter>
+      {/* HashRouter with basename for GitHub Pages subdirectory routing */}
+      <HashRouter basename={import.meta.env.BASE_URL}>
         <AppContent />
       </HashRouter>
     </ThemeProvider>
