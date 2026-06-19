@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
-import { marked } from 'marked';
-import DOMPurify from 'dompurify';
+// import { marked } from 'marked';
+// import DOMPurify from 'dompurify';
 import { useMemo } from 'react';
 
 marked.setOptions({ gfm: true, breaks: false });
