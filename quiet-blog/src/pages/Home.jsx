@@ -8,10 +8,6 @@ import TrainScene from '../components/scenes/TrainScene';
 import { getRecentPosts } from '../data/posts';
 import { useState, useEffect } from 'react';
 
-useEffect(() => {
-  document.title = "Home | I Should Have My Tea"; 
-}, []);
-
 const FEATURES = [
   {
     emoji: '🧘',
@@ -53,6 +49,13 @@ function getScene(theme) {
 }
 
 export default function Home() {
+
+
+useEffect(() => {
+  document.title = "Home | I Should Have My Tea"; 
+}, []);
+
+
   const { theme, palette } = useTheme();
   const recentPosts = getRecentPosts(3);
 

@@ -6,12 +6,6 @@ import { useTheme } from '../context/ThemeContext';
 import { useState, useEffect } from 'react';
 
 marked.setOptions({ gfm: true, breaks: false });
-
-// Add this inside your Home() / About() / Blog() components before the return statement:
-useEffect(() => {
-  document.title = "About | I Should Have My Tea"; // Swap "Home" for whichever page it is
-}, []);
-
 export const about = {
   name: "Varun Kolambekar",
   content: `
@@ -32,6 +26,12 @@ So, welcome. Enjoy reading my raw, unfiltered thoughts. Ignore the spelling mist
 };
 
 export default function About() {
+
+// Add this inside your Home() / About() / Blog() components before the return statement:
+useEffect(() => {
+  document.title = "About | I Should Have My Tea"; // Swap "Home" for whichever page it is
+}, []);
+
   const { palette } = useTheme();
 
   const html = useMemo(

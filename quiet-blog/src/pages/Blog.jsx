@@ -7,12 +7,13 @@ import { useState, useEffect } from 'react';
 const ALL_POSTS = getSortedPosts();
 const ALL_TAGS  = getAllTags();
 
+export default function Blog() {
+
 // Add this inside your Home() / About() / Blog() components before the return statement:
 useEffect(() => {
   document.title = "Blog | I Should Have My Tea"; // Swap "Home" for whichever page it is
 }, []);
 
-export default function Blog() {
   const [query, setQuery] = useState('');
   const [activeTag, setActiveTag] = useState(null);
   const { palette } = useTheme();
