@@ -13,6 +13,17 @@
       href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
+
+    <script type="text/javascript">
+      // Handle GitHub Pages 404 redirect for single-page app
+      (function() {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
     <script type="module" crossorigin src="/I-Should-Have-My-Tea/assets/index-BbKL4U7X.js"></script>
     <link rel="modulepreload" crossorigin href="/I-Should-Have-My-Tea/assets/vendor-BteUmVcz.js">
     <link rel="modulepreload" crossorigin href="/I-Should-Have-My-Tea/assets/markdown-B0K6l-Xx.js">
