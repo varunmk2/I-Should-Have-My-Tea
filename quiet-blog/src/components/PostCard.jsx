@@ -6,7 +6,7 @@ export default function PostCard({ post, featured = false, palette }) {
 
   return (
     <Link
-      to={`/blog/${post.slug}`}
+      to={`/I-Should-Have-My-Tea/blog/${post.slug}`}
       style={{
         textDecoration: 'none',
         display: 'block',
