@@ -200,7 +200,7 @@ useEffect(() => {
             Recent Posts
           </h2>
           <Link
-            to="/I-Should-Have-My-Tea/blog"
+            to="/blog"
             style={{
               fontFamily: "'JetBrains Mono', monospace",
               fontSize: '0.8rem',
