@@ -57,7 +57,7 @@ Ultimately, A Long Way Down reminded me that we don’t need to have our entire 
   },
 {
     slug: "daily-obstacle-course-commute",
-    title: "The Daily Obstacle Course: Survival Notes from my Two-Wheeler Commute",
+    title: "Survival Notes from my Two-Wheeler Commute",
     description: "A rant on my daily road troubles.",
     pubDate: "2026-06-17",
     tags: ["Rant", "Perspectives"],
