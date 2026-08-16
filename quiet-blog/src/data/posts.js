@@ -6,7 +6,7 @@ export const posts = [
     pubDate: "2026-06-12",
     tags: ["Review", "Life Lessons","Books"],
     readTime: "4 min read",
-    featuredImage: `${import.meta.env.BASE_URL}images/longwaydown.jpg`,
+    featuredImage: '/images/why-i-read-slowly-featured.svg',
     content: `
 A Long Way Down is based on a group of four people who run into each other on New Year’s Eve at the top of a London skyscraper, all with the simple, goal of jumping.
 
@@ -62,7 +62,7 @@ Ultimately, A Long Way Down reminded me that we don’t need to have our entire 
     pubDate: "2026-06-17",
     tags: ["Rant", "Perspectives"],
     readTime: "4 min read",
-    featuredImage: `${import.meta.env.BASE_URL}images/commute.jpg`,
+    featuredImage: '/images/logic-and-reflection-featured.svg',
     content: `
 
 I am a college student whose daily routine consists of traveling around 15 kilo meters every day to my campus. Recently, during my vacation, I also took up an internship that requires me to travel the exact same distance.
@@ -116,7 +116,7 @@ Tomorrow morning, I will go down to my parking lot again. I will put on my helme
     pubDate: "2024-09-15",
     tags: ["Engineering", "Life Lessons"],
     readTime: "7 min read",
-    featuredImage: null,
+    featuredImage: '/images/building-in-public-is-hard-featured.svg',
     content: `
 # Building in Public Is Harder Than It Looks (But Worth It)
 

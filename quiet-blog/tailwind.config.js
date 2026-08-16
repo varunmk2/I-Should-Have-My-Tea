@@ -1,62 +1,64 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
-  darkMode: 'class',
+  content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
       colors: {
-        sage: {
-          50:  '#f2f7f5',
-          100: '#e4f0ea',
-          200: '#c8e1d4',
-          300: '#a5cbb8',
-          400: '#7aaf96',
-          500: '#559278',
-          600: '#40755e',
-          700: '#345e4c',
-          800: '#2c4c3f',
-          900: '#243f34',
+        cream: '#F9F6F0',
+        blush: '#F4CFCF',
+        teal: {
+          heritage: '#3B738F',
+        },
+        rust: {
+          terra: '#D05334',
+        },
+        mustard: {
+          gold: '#E8B43F',
+        },
+        charcoal: {
+          deep: '#2C2A29',
         },
       },
       fontFamily: {
-        mono: ['"JetBrains Mono"', '"Fira Code"', 'Consolas', 'monospace'],
-        sans: ['"Inter"', '"DM Sans"', 'system-ui', 'sans-serif'],
+        heading: ['Playfair Display', 'Cormorant Garamond', 'Georgia', 'serif'],
+        body: ['DM Sans', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
       },
       fontSize: {
-        'hero': ['3.5rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
-        'hero-sm': ['2.2rem', { lineHeight: '1.15', letterSpacing: '-0.01em' }],
+        hero: 'clamp(3.5rem, 10vw, 6rem)',
+        'heading-lg': 'clamp(2rem, 5vw, 3.5rem)',
+        'heading-md': 'clamp(1.5rem, 4vw, 2.5rem)',
+        'heading-sm': 'clamp(1.25rem, 3vw, 1.5rem)',
+        'body-lg': 'clamp(1.125rem, 2vw, 1.25rem)',
+        'body-base': 'clamp(1rem, 1.8vw, 1.125rem)',
+        'body-sm': '0.875rem',
+        caption: '0.75rem',
+      },
+      lineHeight: {
+        tight: '0.95',
+        snug: '1.1',
+        normal: '1.15',
+        relaxed: '1.6',
+        loose: '1.85',
+      },
+      letterSpacing: {
+        tighter: '-0.125rem',
+        tight: '-0.0625rem',
+        wide: '0.125rem',
+        wider: '0.25rem',
+      },
+      maxWidth: {
+        content: '1200px',
+        prose: '65ch',
       },
       borderRadius: {
-        'pixel': '4px',
+        none: '0px',
+        DEFAULT: '0px',
       },
-      boxShadow: {
-        'pixel': '3px 3px 0px #b0c9bc',
-        'pixel-coral': '3px 3px 0px #c0504a',
-        'card': '0 2px 12px rgba(44,62,53,0.08)',
-      },
-      animation: {
-        'float': 'float 6s ease-in-out infinite',
-        'ripple': 'ripple 3s ease-in-out infinite',
-        'sway': 'sway 4s ease-in-out infinite',
-      },
-      keyframes: {
-        float: {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-6px)' },
-        },
-        ripple: {
-          '0%, 100%': { transform: 'scaleX(1)', opacity: '0.6' },
-          '50%': { transform: 'scaleX(1.04)', opacity: '1' },
-        },
-        sway: {
-          '0%, 100%': { transform: 'rotate(-1deg)' },
-          '50%': { transform: 'rotate(1deg)' },
-        }
+      transitionDuration: {
+        smooth: '250ms',
+        gentle: '500ms',
       },
     },
   },
   plugins: [],
-}
+};
